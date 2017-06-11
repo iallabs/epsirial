@@ -1,0 +1,10 @@
+<p1>Welcome to Epsirial <p1>
+{% for product in last_products %}
+  <div class="product">
+    <h3>{{ product.titre }}</h3>
+    <p>{{ product.contenu|truncatewords_html:80 }}</p>
+    <p><a href="{% url 'lire' product.id %}">Lire la suite</a>
+  </div>
+{% empty %}
+    <p>Aucun produit.</p>
+{% endfor %}

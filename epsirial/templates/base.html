@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="/media/css/style.css" />
+   <title>{% block title %}Epsirial Website{% endblock %}</title>
+</head>
+<body>
+<header>Epsirial</header>
+    <nav>
+       {% block nav %}
+       <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/contact/">Contact</a></li>
+       </ul>
+       {% endblock %}
+   </nav>
+   <section id="content">
+       {% block content %}{% endblock %}
+   </section>
+<footer>&copy; Epsirial</footer>
+</body>
+</html>

@@ -5,7 +5,7 @@ from django.apps import AppConfig as BaseAppConfig
 
 class AppConfig(BaseAppConfig):
 
-    name = "mysite1"
+    name = "epsirial"
 
     def ready(self):
-        import_module("mysite1.receivers")
+        import_module("epsirial.receivers")

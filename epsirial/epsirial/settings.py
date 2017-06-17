@@ -5,20 +5,16 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir
 PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 BASE_DIR = PACKAGE_ROOT
 
-DEBUG = False
+DEBUG = True
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "Epsirial",
-        "USER": "root",
-        "PASSWORD": "uehMLMRw",
-        "HOST": "",
-        "PORT": "",
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "dev.db",
     }
 }
 
-ALLOWED_HOSTS = ['www.epsirial.com', 'epsirial.com']
+ALLOWED_HOSTS = []
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -70,11 +66,6 @@ STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, "static", "dist"),
 ]
 
-# Additional locations of static files
-STATICFILES_DIRS = [
-    os.path.join(PROJECT_ROOT, "static", "dist"),
-]
-
 # List of finder classes that know how to find static files in
 # various locations.
 STATICFILES_FINDERS = [
@@ -83,7 +74,7 @@ STATICFILES_FINDERS = [
 ]
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = "^*fsuvcv5^uov%*9v(y8*dib++0cfpohba*kyu=krwb63e&z9@"
+SECRET_KEY = "wdl(^hk^o@&v$yt9dzz)ili8doo+y=u#p82z1twz#6=y#(70_q"
 
 TEMPLATES = [
     {
@@ -120,10 +111,10 @@ MIDDLEWARE_CLASSES = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "mysite1.urls"
+ROOT_URLCONF = "epsirial.urls"
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = "mysite1.wsgi.application"
+WSGI_APPLICATION = "epsirial.wsgi.application"
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -144,7 +135,7 @@ INSTALLED_APPS = [
     "pinax.webanalytics",
 
     # project
-    "mysite1",
+    "epsirial",
 ]
 
 # A sample logging configuration. The only tangible logging

@@ -9,8 +9,12 @@ DEBUG = True
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "dev.db",
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "Epsirial",
+        "USER": "root",
+        "PASSWORD": "uehMLMRw",
+        "HOST": "",
+        "PORT": "",
     }
 }
 

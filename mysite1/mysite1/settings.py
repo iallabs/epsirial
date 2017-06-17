@@ -5,7 +5,7 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir
 PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 BASE_DIR = PACKAGE_ROOT
 
-DEBUG = True
+DEBUG = False
 
 DATABASES = {
     "default": {
@@ -64,6 +64,11 @@ STATIC_ROOT = os.path.join(PACKAGE_ROOT, "site_media", "static")
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = "/site_media/static/"
+
+# Additional locations of static files
+STATICFILES_DIRS = [
+    os.path.join(PROJECT_ROOT, "static", "dist"),
+]
 
 # Additional locations of static files
 STATICFILES_DIRS = [
